@@ -1,0 +1,212 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+  background: #f5f5f7;
+  color: #1d1d1f;
+  min-height: 100vh;
+  padding: 20px;
+  transition: background 0.3s, color 0.3s;
+}
+
+body.dark {
+  background: #1c1c1e;
+  color: #f5f5f7;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.streak {
+  background: #007aff;
+  color: white;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.theme-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 4px 8px;
+}
+.input-area {
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  margin-bottom: 30px;
+  position: relative;
+}
+
+body.dark .input-area {
+  background: #2c2c2e;
+}
+
+textarea {
+  width: 100%;
+  height: 90px;
+  border: none;
+  resize: none;
+  font-size: 1.1rem;
+  outline: none;
+  background: transparent;
+  color: inherit;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.char-count {
+  text-align: right;
+  font-size: 0.85rem;
+  color: #888;
+  margin-bottom: 14px;
+}
+
+button.save {
+  background: #007aff;
+  color: white;
+  border: none;
+  padding: 14px 24px;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.2s;
+}
+
+button.save:hover:not(:disabled) {
+  background: #0056b3;
+}
+
+button.save:disabled {
+  background: #c7c7cc;
+  cursor: not-allowed;
+}
+
+.saved-msg {
+  position: absolute;
+  bottom: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #34c759;
+  color: white;
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+
+.saved-msg.show {
+  opacity: 1;
+}
+
+.search-box {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  background: white;
+  color: inherit;
+}
+
+body.dark .search-box {
+  background: #2c2c2e;
+  border-color: #444;
+}
+
+.entries {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.entry {
+  background: white;
+  border-radius: 14px;
+  padding: 16px 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+body.dark .entry {
+  background: #2c2c2e;
+}
+
+.entry-text {
+  flex: 1;
+  font-size: 1.05rem;
+  line-height: 1.4;
+}
+
+.entry-date {
+  font-size: 0.8rem;
+  color: #888;
+  margin-top: 4px;
+}
+
+.empty {
+  text-align: center;
+  color: #888;
+  padding: 40px 0;
+  font-size: 1.1rem;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  color: #ff3b30;
+  cursor: pointer;
+  font-size: 1.3rem;
+  opacity: 0.6;
+  line-height: 1;
+}
+
+.delete-btn:hover {
+  opacity: 1;
+}
